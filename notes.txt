@@ -1,2 +1,24 @@
 #### Notes
 
+# oracle vm  (Coding!2019)
+Step 1: Download and install VirtualBox 6 from https://www.virtualbox.org/wiki/Downloads
+
+Step 2: Download the appliance file Django-Python-Advanced-Ubuntu18.ova
+(https://drive.google.com/uc?export=download&id=1LU_GQTAx4Tn72c0aYTsfgu17ajOzl3fZ)
+
+Step 3: Open VirtualBox and select File > Import Appliance
+Step 4: Selected the previously downloaded django-python-advanced-Ubuntu18.ova file and click Next
+Step 5: Leave the settings page as default and click Import
+Step 6: Review the Software License Agreement and click Accept to agree
+Step 7: Wait for the import to complete…
+Step 8: Double click Django-Python-Advanced-Ubuntu18 to start the virtual machine
+You may login with the password: Coding!2019
+
+
+# docker build ( requires Dockcerfile)
+docker build .
+
+# docker-compose build ( requires docker-compose.yaml)
+docker-compose build
+
+docker-compose run app sh -c "django-admin.py startproject app ."
