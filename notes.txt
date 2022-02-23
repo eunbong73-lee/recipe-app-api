@@ -22,3 +22,18 @@ docker build .
 docker-compose build
 
 docker-compose run app sh -c "django-admin.py startproject app ."
+
+# test app create
+docker-compose run app sh -c "python manage.py startapp core"
+
+# rm /core/test.py, views.py 
+# create file /core/tests/__init__.py 
+
+
+# db 생성
+docker-compose run app sh -c "python manage.py makemigrations core"
+docker-compose run app sh -c "python manage.py test"
+
+
+# test 
+docker-compose run app sh -c "python manage.py test && flake8"
